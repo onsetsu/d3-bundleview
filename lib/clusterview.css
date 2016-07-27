@@ -1,0 +1,73 @@
+.node {
+    font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    fill: #999999;
+    stroke: white;
+}
+
+.node--leaf {
+    fill: #6666af;
+}
+
+.node--descendant {
+    fill: #dfd89d;
+}
+
+.node--ancestor {
+    fill: #efe8ad;
+}
+
+.node:hover {
+    fill: steelblue;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+    font-weight: 700;
+}
+
+.node--hovered {
+    fill: steelblue;
+    border: steelblue;
+}
+
+.node--source {
+    fill: #2ca02c;
+}
+
+.node--target {
+    fill: #d62728;
+}
+
+.link {
+    fill: none;
+    stroke:url(#bundleview-gradient);
+    stroke-opacity: .4;
+    pointer-events: none;
+}
+
+.link--source,
+.link--target {
+    stroke-opacity: .7;
+    stroke-width: 2px;
+}
+
+.link--none {
+    stroke: #d4d4d4;
+    stroke-opacity: .3;
+}
+
+.colors {
+    related-nodes: #66eaea;
+    related-nodes2: #46caca;
+    basic: #999999;
+    leaf:  #6666af;
+    small: #ca4444;
+}
+
+.bundle--text {
+    width: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

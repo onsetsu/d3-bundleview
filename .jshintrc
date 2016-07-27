@@ -1,0 +1,8 @@
+{
+  "esversion": 6,
+  "jquery": true,
+  "globals": ["document"],
+  "browser": true,
+  "devel": true,
+  "evil": true
+}

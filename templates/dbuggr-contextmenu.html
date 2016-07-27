@@ -1,0 +1,64 @@
+<!-- http://jsfiddle.net/1mo3vmja/2/ -->
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+<link rel="import"
+      href="../bower_components/iron-input/iron-input.html">
+
+<dom-module id="dbuggr-contextmenu">
+    <template>
+        <style>
+            :host {
+                position: absolute;
+                top: "200px";
+                left: "200px";
+                border: 20px;
+                z-index: 200;
+            }
+
+            .container {
+                width: 120px;
+                background-color: white;
+                border: 0.7px solid gray;
+                margin: 0;
+                padding: 0;
+                cursor: default;
+                list-style-type: none;
+            }
+
+            .container /deep/ li {
+                font-size: 10pt;
+                padding: 10px 5px 5px 10px;
+                margin: 0;
+                list-style-type: none;
+                color:  #1a1a1a;
+            }
+
+            .container /deep/ li:hover {
+                background-color: #2B65EC;
+                color: white;
+            }
+        </style>
+
+        <ul class="container"><content></content></ul>
+    </template>
+
+    <script>
+        Polymer({
+            is: "dbuggr-contextmenu",
+            ready: function() {
+                // set this element's owner property
+                this.owner = "Foo";
+            },
+            properties: {
+                owner: {
+                    type: String,
+                    value: "Bar"
+                }
+            },
+            doStuff: function(foo) {
+                console.log('doStuff');
+            }
+        });
+    </script>
+
+</dom-module>
