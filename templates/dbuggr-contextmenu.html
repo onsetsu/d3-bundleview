@@ -1,8 +1,6 @@
 <!-- http://jsfiddle.net/1mo3vmja/2/ -->
 <link rel="import"
       href="../bower_components/polymer/polymer.html">
-<link rel="import"
-      href="../bower_components/iron-input/iron-input.html">
 
 <dom-module id="dbuggr-contextmenu">
     <template>
@@ -44,20 +42,7 @@
 
     <script>
         Polymer({
-            is: "dbuggr-contextmenu",
-            ready: function() {
-                // set this element's owner property
-                this.owner = "Foo";
-            },
-            properties: {
-                owner: {
-                    type: String,
-                    value: "Bar"
-                }
-            },
-            doStuff: function(foo) {
-                console.log('doStuff');
-            }
+            is: "dbuggr-contextmenu"
         });
     </script>
 
