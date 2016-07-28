@@ -10,20 +10,16 @@
 
     <!-- external libraries -->
     <script src="node_modules/d3/d3.js"></script>
-    <script src="vendor/radio.js"></script>
     <script src="vendor/jquery.js"></script>
     <script src="vendor/bluebird.js"></script>
     <script src="src/external/system.src.js"></script>
 
 </head>
-<script src="./node_modules/d3/d3.js" type="text/javascript" charset="utf-8"></script>
-
-<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="import" href="templates/dbuggr-contextmenu.html">
 <body>
 
 <h1>BundleView (Circular Edge Bundles)</h1>
 <div id="bundleview-root"></div>
+<div id="bundleview-root2"></div>
 <script>
     System.config({
         transpiler: 'babel',
@@ -33,7 +29,7 @@
         }
     });
 
-    System.import('dbuggr.js');
+    System.import('index.js');
 </script>
 
 </body>
