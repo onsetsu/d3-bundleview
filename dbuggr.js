@@ -1,1 +1,1 @@
-import Bundleview from './lib/file-browser/bundleview.js';
+import Bundleview from './lib/bundleview.js';
