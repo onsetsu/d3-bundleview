@@ -28,10 +28,15 @@ function getRandomLinks(root, numberOfLinks) {
 d3.json("example/flare.json", function(error, root) {
     if (error) throw error;
 
+    d3.select('#bundleview-root')
+        .attr("width", 700)
+        .attr("height", 600);
     new Bundleview(root, getRandomLinks(root, 30), '#bundleview-root');
+
     d3.json("example/flare.json", function(error, root) {
         if (error) throw error;
 
         new Bundleview(root, getRandomLinks(root, 30), '#bundleview-root2');
     });
+
 });
