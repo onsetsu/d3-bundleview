@@ -15,8 +15,8 @@ function getRandomLinks(root, numberOfLinks) {
 
         if(source !== target) {
             links.push({
-                source: source,
-                target: target
+                source: source.id,
+                target: target.id
             });
         }
     }
@@ -24,19 +24,36 @@ function getRandomLinks(root, numberOfLinks) {
     return links;
 }
 
+function attachIDs(root) {
+    var id = 0;
+    function attachIDThenIterate(node) {
+        node.id = id++;
+        node.children && node.children.forEach(attachIDThenIterate);
+    }
+    attachIDThenIterate(root);
+}
+
 // init it all
-d3.json("example/flare.json", function(error, root) {
+d3.json("example/flare-compat.json", function(error, root) {
     if (error) throw error;
 
     d3.select('#bundleview-root')
         .attr("width", 700)
         .attr("height", 600);
-    new Bundleview(root, getRandomLinks(root, 30), '#bundleview-root');
+    attachIDs(root);
+    new Bundleview({
+        nodes: root,
+        relations: getRandomLinks(root, 1)
+    }, '#bundleview-root');
 
-    d3.json("example/flare.json", function(error, root) {
+    d3.json("example/flare-compat.json", function(error, root) {
         if (error) throw error;
 
-        new Bundleview(root, getRandomLinks(root, 30), '#bundleview-root2');
+        attachIDs(root);
+        new Bundleview({
+            nodes: root,
+            relations: getRandomLinks(root, 1)
+        }, '#bundleview-root2');
     });
 
 });
