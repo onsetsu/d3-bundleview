@@ -39,6 +39,10 @@
     fill: #d62728;
 }
 
+.node--none {
+    fill-opacity: 0.4;
+}
+
 .link {
     fill: none;
     stroke:url(#bundleview-gradient);
@@ -71,3 +75,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.bundle--text--none {
+    fill-opacity: 0.4;
+}
+
