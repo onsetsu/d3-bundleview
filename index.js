@@ -3,7 +3,7 @@ import { Bundleview, isLeaf, randomLeaf } from './lib/bundleview.js';
 
 
 // init it all
-var generatedBundleview = new TreeGenerator(4, 50, 10)
+var generatedBundleview = new TreeGenerator(4, 50, 100)
     .createJSON();
 d3.select('#bundleview-root')
     .attr("width", 700)
