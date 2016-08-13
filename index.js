@@ -1,6 +1,5 @@
 import { Bundleview, isLeaf, randomLeaf } from './lib/bundleview.js';
-
-
+import TreeGenerator, {BundleView} from './tree-generator/tree-generator.js';
 
 // init it all
 var generatedBundleview = new TreeGenerator(4, 50, 100)
