@@ -1,0 +1,3 @@
+[submodule "tree-generator"]
+	path = tree-generator
+	url = https://github.com/onsetsu/tree-generator.git
