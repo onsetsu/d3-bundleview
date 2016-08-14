@@ -1,6 +1,8 @@
 # Bundleview Visualization
 A d3 implementation of bundleviews (circular edge bundles)
 
+... using [hierarchical edge bundles][hierarchical edge bundles paper] to cluster dependencies.
+
 ---
 
 See some [examples][gh-pages] in action.
@@ -29,7 +31,7 @@ https://github.com/onsetsu/d3-bundleview.git
           "label": "app.js",
           "attributes": {
             "rloc": 162,
-          "cyclomatic complexity": 4
+            "cyclomatic complexity": 4
           }
         },
       // ...
@@ -37,8 +39,8 @@ https://github.com/onsetsu/d3-bundleview.git
             "id": 34,
             "label": "lib.js",
             "attributes": {
-              "rloc": 162,
-              "cyclomatic complexity": 4
+              "rloc": 367,
+              "cyclomatic complexity": 16
             }
           },
       // ...
@@ -54,8 +56,9 @@ https://github.com/onsetsu/d3-bundleview.git
 }
 ```
 **Notes:**
-- So all non-leaf nodes have the `children` attribute, while leaf nodes have the `attributes` map instead.
-- Relations should only refer to the `id`s leaf nodes as `source` and `target`.
+- All non-leaf nodes have the `children` attribute, while leaf nodes have the `attributes` map instead.
+- Relations only refer to the `id`s of leaf nodes as `source` and `target`.
+
 ```js
 import { Bundleview } from 'path-to-submodule/lib/bundleview.js';
 ```
@@ -64,6 +67,15 @@ import { Bundleview } from 'path-to-submodule/lib/bundleview.js';
 new Bundleview(dataJson, 'parent css selector');
 ```
 
+## How to hack?
+
+## Issues?
+
+## Roadmap
+- ![alt text][roadmap relation attributes]
+
+[hierarchical edge bundles paper]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.8113&rep=rep1&type=pdf
 
 [gh-pages]: https://onsetsu.github.io/d3-bundleview "Go to the demo at gh-pages"
 [flare-physics-import]: ./example/flare-physics-import.png "Physics components are only used by ForceDirectedLayout"
+[roadmap relation attributes]: ./example/roadmap/relation-attributes.png "TODO"
