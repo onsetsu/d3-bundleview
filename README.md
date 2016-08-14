@@ -1,7 +1,11 @@
 # Bundleview Visualization
 A d3 implementation of bundleviews (circular edge bundles)
 
-... using [hierarchical edge bundles][hierarchical edge bundles paper] to cluster dependencies.
+Bundleviews (Inverted radial layouts with hierarchical edge bundles) are a visualization technique that uses an inverted radial layout to visualize hierarchical data (like software projects). In addition to the hierarchical data, relations between data entries are visualized using [hierarchical edge bundles][hierarchical edge bundles paper]. This allows to cluster dependencies along hierarchies, ultimately revealing higher-level dependencies:
+
+![alt text][varying bundletension]
+
+Using the bundling strength, we can provide a trade-off between low-level and high-level insights based on adjacent relations. The bundling strength increases from left to right in the above example.
 
 ---
 
@@ -76,6 +80,7 @@ new Bundleview(dataJson, 'parent css selector');
 
 [hierarchical edge bundles paper]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.8113&rep=rep1&type=pdf
 
+[varying bundletension]: ./example/varying-bundletension.png "Varying bundle tension reveals or hides"
 [gh-pages]: https://onsetsu.github.io/d3-bundleview "Go to the demo at gh-pages"
 [flare-physics-import]: ./example/flare-physics-import.png "Physics components are only used by ForceDirectedLayout"
 [roadmap relation attributes]: ./example/roadmap/relation-attributes.png "TODO"
