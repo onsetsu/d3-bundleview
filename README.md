@@ -12,7 +12,9 @@ Using the bundling strength, we can provide a trade-off between low-level and hi
 
 ## Example
 
-See some [examples][gh-pages] in action.
+**See  and play with some [examples][gh-pages].**
+
+Using bundleviews we are able to interactively explore our data and thereby reveal interesting pattern. Here we take a look at the [flare visualization library][flare]:
 
 ![The flare visualization library as a bundleview][flare-physics-import]
 
@@ -188,6 +190,7 @@ With this, we could for example visualize time-dependent interactions between hi
 [questions]: https://github.com/onsetsu/d3-bundleview/issues
 [issues]: https://github.com/onsetsu/d3-bundleview/issues
 
+[flare]: http://flare.prefuse.org/
 [varying bundletension]: ./example/varying-bundletension.png "Varying bundle tension reveals or hides"
 [generated bundleview]: ./example/generated-bundleview.png "Showing some randomly generated data"
 [gh-pages]: https://onsetsu.github.io/d3-bundleview "Go to the demo at gh-pages"
