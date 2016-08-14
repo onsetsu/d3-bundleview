@@ -1,9 +1,16 @@
 # Bundleview Visualization
-A d3 implementation of bundleviews (circular edge bundles)
 
-... using [hierarchical edge bundles][hierarchical edge bundles paper] to cluster dependencies.
+![Simple example][generated bundleview]
+
+Bundleviews (Inverted radial layouts with hierarchical edge bundles) are a visualization technique that uses an inverted radial layout to visualize hierarchical data (like software projects). In addition to the hierarchical data, relations between data entries are visualized using [hierarchical edge bundles][hierarchical edge bundles paper]. This allows to cluster dependencies along hierarchies, ultimately revealing higher-level dependencies:
+
+![alt text][varying bundletension]
+
+Using the bundling strength, we can provide a trade-off between low-level and high-level insights based on adjacent relations. The bundling strength increases from left to right in the above example.
 
 ---
+
+## Example
 
 See some [examples][gh-pages] in action.
 
@@ -12,7 +19,7 @@ See some [examples][gh-pages] in action.
 Our visualization reveals that any class in flare's *physics* module is only imported by the class *ForeDirectedLayout*.
 
 ## Installation
-
+If you just want to use the visualization, read the following instructions, if you instead want to contribute, see [here][section contribute].
 ```bash
 https://github.com/onsetsu/d3-bundleview.git
 
@@ -67,15 +74,22 @@ import { Bundleview } from 'path-to-submodule/lib/bundleview.js';
 new Bundleview(dataJson, 'parent css selector');
 ```
 
-## How to hack?
+## Contribute
 
 ## Issues?
+If you find a bug or have a feature request, please open an [issue][issues]. Or consider [contributing][section contribute] to the project.
 
 ## Roadmap
 - ![alt text][roadmap relation attributes]
 
+
+
 [hierarchical edge bundles paper]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.8113&rep=rep1&type=pdf
 
+[section contribute]: ./readme.md#contribute
+[issues]: https://github.com/onsetsu/d3-bundleview/issues
+[varying bundletension]: ./example/varying-bundletension.png "Varying bundle tension reveals or hides"
+[generated bundleview]: ./example/generated-bundleview.png "Showing some randomly generated data"
 [gh-pages]: https://onsetsu.github.io/d3-bundleview "Go to the demo at gh-pages"
 [flare-physics-import]: ./example/flare-physics-import.png "Physics components are only used by ForceDirectedLayout"
 [roadmap relation attributes]: ./example/roadmap/relation-attributes.png "TODO"
