@@ -13,38 +13,8 @@ var bundleview = new Bundleview(generatedBundleview, '#bundleview-root');
 
 // second bundleview
 d3.json("example/flare-compat.json", function(error, root) {
-    function getRandomLinks(root, numberOfLinks) {
-        var links = [];
-
-        for(var i = 0; i < numberOfLinks; i++) {
-            var source = randomLeaf(root),
-                target = randomLeaf(root);
-
-            if(source !== target) {
-                links.push({
-                    source: source.id,
-                    target: target.id
-                });
-            }
-        }
-
-        return links;
-    }
-
-    function attachIDs(root) {
-        var id = 0;
-        function attachIDThenIterate(node) {
-            node.id = id++;
-            node.children && node.children.forEach(attachIDThenIterate);
-        }
-        attachIDThenIterate(root);
-    }
-
     if (error) throw error;
 
-    attachIDs(root);
-    new Bundleview({
-        nodes: root,
-        relations: getRandomLinks(root, 1)
-    }, '#bundleview-root2');
+    //attachIDs(root);
+    new Bundleview(root, '#bundleview-root2');
 });
