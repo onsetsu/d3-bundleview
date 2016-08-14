@@ -2,7 +2,7 @@
 
 ![Simple example][generated bundleview]
 
-Bundleviews (Inverted radial layouts with hierarchical edge bundles) are a visualization technique that uses an inverted radial layout to visualize hierarchical data (like software projects). In addition to the hierarchical data, relations between data entries are visualized using [hierarchical edge bundles][hierarchical edge bundles paper]. This allows to cluster dependencies along hierarchies, ultimately revealing higher-level dependencies:
+Bundleviews are a visualization technique that uses an inverted radial layout to visualize hierarchical data (like software projects). In addition to the hierarchical data, relations between data entries are visualized using [hierarchical edge bundles][hierarchical edge bundles paper]. This allows to cluster dependencies along hierarchies, ultimately revealing higher-level dependencies:
 
 ![alt text][varying bundletension]
 
@@ -16,14 +16,24 @@ See some [examples][gh-pages] in action.
 
 ![alt text][flare-physics-import]
 
-Our visualization reveals that any class in flare's *physics* module is only imported by the class *ForeDirectedLayout*.
+In the above example, the visualization reveals that any class in flare's *physics* module is only imported by the class *ForeDirectedLayout*.
 
 ## Installation
 If you just want to use the visualization, read the following instructions, if you instead want to contribute, see [here][section contribute].
-```bash
-https://github.com/onsetsu/d3-bundleview.git
 
+Clone the repository and init the contained submodules:
+```bash
+git clone --recursive https://github.com/onsetsu/d3-bundleview.git
+cd d3-bundleview
 ```
+
+Next, start a local http server, e.g. if you still have Python 2.7:
+```bash
+serverNoCache.py
+```
+
+Then, point your browser (preferably newer versions of Chrome) to the project's index page: `http://localhost:8080/index.html`
+
 ## Usage
 
 ```js
@@ -75,11 +85,13 @@ new Bundleview(dataJson, 'parent css selector');
 ```
 
 ## Contribute
+Fork, clone, init subs, create pull requests
 
 ## Issues?
 If you find a bug or have a feature request, please open an [issue][issues]. Or consider [contributing][section contribute] to the project.
 
 ## Roadmap
+- Data Validator: Check input data and provide meaningful warnings and error messages.
 - ![alt text][roadmap relation attributes]
 
 
