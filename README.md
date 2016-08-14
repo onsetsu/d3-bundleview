@@ -119,7 +119,7 @@ When you get stuck, do not hesitate to ask [questions][questions].
 
 - [index.js](./index.js): The main entrance point to the project. You build and configure your bundleview here. 
 - [lib/bundleview.js](./lib/bundleview.js): The main library file that contains all the logic used to create the bundleview, including layouts, path generation, and interactions.
-- [dbuggr.css](./dbuggr.css), [clusterview.css](./lib/clusterview.js): Style sheets that control the appearance of nodes and relations, mostly used to control highlighting.
+- [dbuggr.css](./dbuggr.css), [clusterview.css](./lib/clusterview.css): Style sheets that control the appearance of nodes and relations, mostly used to control highlighting.
 
 **What contributions are valuable?**
 
@@ -178,8 +178,8 @@ With this, we could for example visualize time-dependent interactions between hi
 
 
 
-[section contribute]: ./readme.md#contribute
-[section roadmap]: ./readme.md#roadmap
+[section contribute]: ./README.md#contribute
+[section roadmap]: ./README.md#roadmap
 
 [hierarchical edge bundles paper]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.8113&rep=rep1&type=pdf "Holten's milestone paper"
 [Cornelissen, 2008]: http://www.sciencedirect.com/science/article/pii/S0164121208000502 "Execution trace analysis through massive sequence and circular bundle views"
