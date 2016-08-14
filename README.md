@@ -133,12 +133,13 @@ Everthing including, but not limited to:
 If you find a bug or have a feature request, please open an [issue][issues]. Or consider [contributing][section contribute] to the project.
 
 ## Roadmap
+A collection of future work items prooritized by feasibility, with near future items first and visionary items later. 
 
-**Data Validator**
+##### Data Validator
 
 Check input data and provide meaningful warnings and error messages.
 
-**Deal with empty Directories**
+##### Deal with empty Directories
 
 Right now, empty directories, i.e. nodes without an `attributes` and `children` field are not allowed. So, the following node would result in an error:
 
@@ -150,12 +151,12 @@ Right now, empty directories, i.e. nodes without an `attributes` and `children` 
 }
 ```
 
-**Dynamic Data**
+##### Dynamic Data
 
 Dynamically add or remove nodes or relations in an existing bundleview.
 Note, that each insertion or deletion affects several aspects of the visualization, including metric boundaries, and therefore potentially all color and size scales.
 
-**Attributes for relations**
+##### Attributes for relations
 
 Same as nodes, relations could also be attributed, with varying appearance based on certain metrics.
 ```js
