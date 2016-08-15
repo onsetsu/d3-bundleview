@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>BundleView</title>
+    <title>Bundleview</title>
 
     <link rel="stylesheet" type="text/css" href="dbuggr.css"/>
     <link rel="stylesheet" type="text/css" href="lib/clusterview.css"/>
@@ -18,13 +18,30 @@
 </head>
 <body>
 
-<h1>BundleView (Circular Edge Bundles)</h1>
+<h1>Bundleview Visualization Examples</h1>
+<p>The following examples show the capabilities of our bundleview implementation:</P>
 
-<h2>Randomly generated data</h2>
+<p>Hovering over a node highlights it. All ancestors and descendants are highlighted as well. In addition, the visualisations shows all nodes related to a leaf of the highlighted node. Source are green, targets are red. Unrelated nodes and relations are faded out to emphasize the selection.</p>
+
+<p>Right clicking a node permanently highlights it, allowing to examine related nodes closely. Another right click on the same node removes the permanent highlight.</p>
+
+<p>Left click a node to focus it. Click the outermost ring to go one step up in the hierarchy.</p>
+
+<p>Use the selection items under the bundleview to manipulate its appearance:</p>
+<ul>
+<li><p>The <b>Size Metric</b> manipulates the radial width of each leaf node. The default selection renders all leafs at the same size.<p/></li>
+<li><p>The default <b>Color Metric</b> renders all leafs using the same color. Changing this selection to a metric with a continuous scale renders the leaf nodes in different shades of the same color, with brighter colors representing higher values. In this case parent nodes are colored by the weighted average of their children. The size metric determines the relative weight of each node, with bigger nodes being more influential. If the chosen metric has an ordinal scale (meaning categorical values) instead, only leaf nodes are rendered by assigning a color for each value. Note, that multiple categories might have the same color value, if the numer of categories exceeds a certain limit.<p/></li>
+</ul>
+
+<h2>Hello Bundleview</h2>
+<p>The following bundleview displays a randomly generated data set. While not delivering much insights, it suites its role as a variable performance benchmark.</p>
+<br />
 <div id="bundleview-root"></div>
 
-<a href="http://flare.prefuse.org/"><h2>Flare visualization library</h2></a>
-<p>Typical example data for d3 visualizations</p>
+<h2>Flare</h2>
+<p>The data of the <a href="http://flare.prefuse.org/">flare visualization library</a> is one of d3's most canonical benchmarks. As such, we obviously want to display it, too.</p>
+<p>Relations display imports: The class of interest imports all connected red nodes and is imported by all connected green nodes.</p>
+<br />
 <div id="bundleview-root2"></div>
 
 <script>
