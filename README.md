@@ -135,7 +135,7 @@ Everthing including, but not limited to:
 If you find a bug or have a feature request, please open an [issue][issues]. Or consider [contributing][section contribute] to the project.
 
 ## Roadmap
-A collection of future work items prooritized by feasibility, with near future items first and visionary items later. 
+A collection of future work items prioritized by feasibility, with near future items first and more visionary items later. 
 
 ##### Data Validator
 
