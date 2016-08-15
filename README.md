@@ -12,7 +12,7 @@ Using the bundling strength, we can provide a trade-off between low-level and hi
 
 ## Example
 
-**See  and play with some [examples][gh-pages].**
+**See  and play with some [examples][gh-pages] (preferably in newer versions of Chrome).**
 
 Using bundleviews we are able to interactively explore our data and thereby reveal interesting pattern. Here we take a look at the [flare visualization library][flare]:
 
