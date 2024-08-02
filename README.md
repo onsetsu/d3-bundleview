@@ -2,8 +2,6 @@
 
 ![Simple example][generated bundleview]
 
-## Introduction
-
 Bundleviews are a visualization technique that uses an inverted radial layout to visualize hierarchical data (like software projects). In addition to the hierarchical data, relations between data entries are visualized using [hierarchical edge bundles][hierarchical edge bundles paper]. This allows to cluster dependencies along hierarchies, ultimately revealing higher-level dependencies:
 
 ![Varying bundle tension][varying bundletension]
@@ -12,7 +10,7 @@ Using the bundling strength, we can provide a trade-off between low-level and hi
 
 ## Example
 
-**See  and play with some [examples][gh-pages] (preferably in newer versions of Chrome).**
+See and play with some **[examples][gh-pages]**.
 
 Using bundleviews we are able to interactively explore our data and thereby reveal interesting pattern. Here we take a look at the [flare visualization library][flare]:
 
