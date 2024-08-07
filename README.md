@@ -1,5 +1,13 @@
 # Bundleview Visualization
 
+A d3 implementation of bundleviews.
+
+![Interactively exploring flare.js][flare-gif]
+
+**[Try it yourself!][gh-pages]**
+
+## A Primer on Bundleviews
+
 ![Simple example][generated bundleview]
 
 Bundleviews are a visualization technique that uses an inverted radial layout to visualize hierarchical data (like software projects). In addition to the hierarchical data, relations between data entries are visualized using [hierarchical edge bundles][hierarchical edge bundles paper]. This allows to cluster dependencies along hierarchies, ultimately revealing higher-level dependencies:
@@ -194,3 +202,4 @@ With this, we could for example visualize time-dependent interactions between hi
 [gh-pages]: https://onsetsu.github.io/d3-bundleview "Go to the demo at gh-pages"
 [flare-physics-import]: ./example/flare-physics-import.png "Physics components are only used by ForceDirectedLayout"
 [roadmap relation attributes]: ./example/roadmap/relation-attributes.png "Visualizing sequences of interaction between hierarchical entities"
+[flare-gif]: ./example/demo-in-lively-cutted.gif "Interacting with the bundleview"
